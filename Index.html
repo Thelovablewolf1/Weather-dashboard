@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="theme-toggle">
+                <span>Light</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Dark</span>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="location-input" placeholder="Enter city name..." autocomplete="off">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <button id="location-btn" title="Use current location"><i class="fas fa-location-arrow"></i></button>
+        </div>
+
+        <div class="weather-display">
+            <div class="current-weather">
+                <div class="location-info">
+                    <h2 id="city-name">--</h2>
+                    <p id="current-date">--</p>
+                </div>
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="current-temp">--</span>
+                        <span class="unit-toggle">
+                            <span class="unit active" id="celsius">°C</span>
+                            <span class="unit" id="fahrenheit">°F</span>
+                        </span>
+                    </div>
+                    <div class="weather-icon" id="weather-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <p id="weather-description">--</p>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-compress-alt"></i>
+                        <span id="pressure">-- hPa</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast" id="forecast">
+                    <!-- Forecast items will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
